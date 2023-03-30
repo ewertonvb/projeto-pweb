@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto PWEB</title>
+    <title>Mooovies</title>
 
     <link rel="stylesheet" href="./style.css" />
 
@@ -18,7 +18,7 @@
     <header>
       <h2 class="logo">Mooovies</h2>
       <nav class="navigation">
-        <a href="#">Início</a>
+        <a href="./index.html">Produtos</a>
         <a href="#">Sobre</a>
         <a href="#">Serviços</a>
         <a href="#">Contato</a>
@@ -26,10 +26,172 @@
       </nav>
     </header>
 
-    <div class="wrapper">
-      <div class="form-box login">
+    <div class="wrapper-login"> <!-- Wrapper em volta do formulário de login -->
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form-box login"> <!-- Formulário de login -->
         <h2>Login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" required>
+            <label>Senha</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox">Lembre-me</label>
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Não possui uma conta?
+              <a href="#" class="register-link">Cadastrar-se
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+    <div class="form-box register"> <!-- Formulário de cadastro -->
+      <h2>Cadastrar-se</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required>
+          <label>Nome</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required>
+          <label>Sobrenome</label>
+        </div>
+
+        <div class="input-data">
+          <input type="date" required>
+          <label>Data de nascimento</label>
+        </div>
+
+        <div class="input-gender">
+          <input list="gender" required>
+          <label>Identidade de gênero</label>
+          <datalist id="gender">
+            <option value="Homem">
+            <option value="Mulher">
+            <option value="Não binário">
+            <option value="Prefiro não dizer">
+          </datalist>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="call"></ion-icon></span>
+          <input type="tel">
+          <label>Número de celular</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required>
+          <label>Senha</label>
+        </div>
+
+        <div class="remember-forgot">
+          <label><input type="checkbox">Eu concordo com os termos de uso</label>
+          
+        </div>
+        <button type="submit" class="btn">Cadastrar-se</button>
+        <div class="login-register">
+          <p>Já possui uma conta?
+            <a href="#" class="login-link">Fazer o login
+            </a>
+            </p>
+          </div>
+        </form>
       </div>
     </div>
+
+    <main>
+      <div class="wrapper">
+        <h2>Cadastro de produtos</h1>
+        <form action="#">
+          <div class="input-global">
+            <label>Nome do filme</label>
+            <input type="text" required placeholder="ex.: The Batman">
+          </div>
+
+          <div class="input-global">
+            <label>Direção</label>
+            <input type="text" required placeholder="ex.: David Fincher">
+          </div>
+
+          <div class="input-global">
+            <label>Roteiro</label>
+            <input type="text" required placeholder="ex.: Greta Gerwig">
+          </div>
+
+          <div class="input-global">
+            <label>Gênero</label>
+            <input type="text" required placeholder="ex.: Drama">
+          </div>
+
+          <div class="input-global">
+            <label>Data de lançamento</label>
+            <input type="date" required>
+          </div>
+
+          <div class="input-global">
+            <label>Sinopse</label>
+            <textarea name="sinopse" cols="50" rows="10" required></textarea>
+          </div>
+
+          <div class="input-global">
+            <label>Produtora</label>
+            <input type="text" required placeholder="ex.: A24">
+          </div>
+
+          <div class="input-global">
+            <label>Distribuidora</label>
+            <input type="text" required placeholder="ex.: Lionsgate">
+          </div>
+          
+          <div class="input-global">
+            <label>Classificação indicativa</label>
+            <input list="classificacao" required placeholder="Livre">
+            <datalist id="classificacao">
+              <option value="Livre">
+              <option value="10 anos">
+              <option value="12 anos">
+              <option value="14 anos">
+              <option value="16 anos">
+              <option value="18 anos">
+            </datalist>
+          </div>
+
+          <div class="input-global">
+            <label>Preço</label>
+            <input type="number" required placeholder="ex.: 50,00">
+          </div>
+          
+          <button type="submit" class="btnGlobal">Cadastrar</button>
+        </form>
+      </div>
+      
+    </main>
+    
+    <script src="./script.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
