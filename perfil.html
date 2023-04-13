@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mooovies</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h2 class="logo">Mooovies</h2>
+      <nav class="navigation">
+        <a href="./index.html">Produtos</a>
+        <a href="./reviews.html">Reviews</a>
+        <a href="#">Serviços</a>
+        <a href="./perfil.html">Perfil</a>
+        <button class="btnLogin-popup">Login</button>
+      </nav>
+    </header>
+
+
+    <div class="wrapper-login"> <!-- Wrapper em volta do formulário de login -->
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form-box login"> <!-- Formulário de login -->
+        <h2>Login</h2>
+        <div id="error1"></div>
+        <form id="form-login" action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input id="email-login" type="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input id="password-login" type="password" required>
+            <label>Senha</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox">Lembre-me</label>
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Não possui uma conta?
+              <a href="#" class="register-link">Cadastrar-se
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+    <div class="form-box register"> <!-- Formulário de cadastro -->
+      <h2>Cadastrar-se</h2>
+
+        <div id="error2" class="error2">
+
+      </div>
+
+      <form id="form-cadastro" action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input id="name" type="text">
+          <label>Nome</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input id="last-name" type="text">
+          <label>Sobrenome</label>
+        </div>
+
+        <div class="input-data">
+          <input id="data-nasc" type="date">
+          <label>Data de nascimento</label>
+        </div>
+
+        <div class="input-gender">
+          <label>Identidade de gênero</label>
+          <select id="gender">
+            <option value="">Escolha uma opção</option>
+            <option value="Homem">Homem</option>
+            <option value="Mulher">Mulher</option>
+            <option value="Pessoa não binária">Pessoa não binária</option>
+            <option value="Prefiro não dizer">Prefiro não dizer</option>
+          </select>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="call"></ion-icon></span>
+          <input id="number" type="tel">
+          <label>Número de celular</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input id="email-cadastro" type="email">
+          <label>Email</label>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input id="password-cadastro" type="password">
+          <label>Senha</label>
+        </div>
+
+        <div class="remember-forgot">
+          <label><input required id="checkbox" type="checkbox">Eu concordo com os termos de uso</label>
+        </div>
+        
+        <button type="submit" class="btn">Cadastrar-se</button>
+        <div class="login-register">
+          <p>Já possui uma conta?
+            <a href="#" class="login-link">Fazer o login
+            </a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Perfil -->
+    <main>
+      <div class="wrapper">
+        <h2>Endereço</h1>
+        <form id="form-perfil" action="#">
+          <div id="error6" class="error6">
+
+          </div>
+          <div class="input-global">
+            <label>Rua</label>
+            <input type="text" required placeholder="ex.: Av. Ceci Cunha">
+          </div>
+
+          <div class="input-global">
+            <label>Nº</label>
+            <input type="number" min="0" required placeholder="ex.: 45">
+          </div>
+
+          <div class="input-global">
+            <label>Bairro</label>
+            <input type="text" required placeholder="ex.: Alto do Cruzeiro">
+          </div>
+
+          <div class="input-global">
+            <label>CEP</label>
+            <input id="cep" type="text" placeholder="ex.: 57000-000">
+          </div>
+
+          <div class="input-global">
+            <label>Cidade</label>
+            <input type="text" required placeholder="ex.: Arapiraca">
+          </div>
+
+          <div class="input-global">
+            <label>Estado</label>
+            <select id="estado">
+              <option value="" disabled selected >Escolha uma opção</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+              </select>
+          </div>
+
+          <div class="input-global">
+            <label>Telefone</label>
+            <input type="number" required placeholder="ex.: 82999999999">
+          </div>
+
+          <div class="input-global">
+            <label>Celular</label>
+            <input type="number" required placeholder="ex.: 82999999999">
+          </div>
+          
+          <div class="check-perfil">
+            <label>
+              <input id="check-perfil" type="checkbox">Usar também como endereço de cobrança.
+            </label>
+
+          <div class="check-perfil">
+            <label>
+              <input id="check-perfil2" type="checkbox">Quero receber notícias e ofertas no email.
+            </label>
+
+          <button id="btnPerfil" type="submit" class="btnGlobal">Cadastrar</button>
+        </form>
+      </div>
+      
+    </main>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>
+</html>
