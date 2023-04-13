@@ -37,6 +37,8 @@ body {
   font-family: 'DM Sans';
   font-size: 1.6rem;
   
+  overflow-x: hidden;
+  
   background-color: var(--bg-light);
   background-size: cover;
   background-position: center;
@@ -120,7 +122,7 @@ textarea {
 }
 
 .wrapper-login.active {
-  height: 72rem;
+  height: 82rem;
 }
 
 .wrapper-login .form-box {
@@ -306,8 +308,49 @@ textarea {
   color: var(--brand-beige);
   margin-left: 14.75rem;
   margin-top: 2rem;
+  display: inline-block;
 }
 
 .btnGlobal:hover {
   cursor: pointer;
+}
+
+#error2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: red;
+}
+
+#error3 {
+  margin-left: 15rem;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+#error6 {
+  margin-left: 15rem;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.check-perfil {
+  margin-top: 3rem;
+  margin-left: 15rem;
+  display: flex;
+}
+
+#check-perfil2 {
+  margin-left: -48.5rem;
+}
+
+#btnPerfil {
+  margin-left: -48.6rem;
+  margin-top: 4rem;
 }
